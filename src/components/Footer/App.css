@@ -1,0 +1,48 @@
+.modal-custom {
+  font-size: 12px;
+}
+.modal-custom > .header-custom {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+}
+.modal-custom > .content-custom {
+  width: 100%;
+  padding: 10px 5px;
+  color: #000;
+}
+.modal-custom > .actions-custom {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+  color: #000;
+}
+.modal-custom > .close-custom {
+  color: #000;
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+.popup-content {
+	width: 35% !important;
+	padding: 35px !important;
+	background-image: url(../../assets/images/bg.jfif) !important;
+	background-size: cover !important;
+}
+
+.button-subscribe, .button-subscribe:hover {
+	background: #000;
+    color: #fff;
+}

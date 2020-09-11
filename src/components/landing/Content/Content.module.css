@@ -1,0 +1,90 @@
+.SectionFirst {
+    max-width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    position:relative;
+    background-size:contain;
+}
+
+.Text {
+    position:absolute;
+    left:5rem;
+    bottom: 2rem;
+}
+
+.Title {
+    font-size:3rem;
+    width:677px;
+    font-weight: bold;
+    text-transform:uppercase;
+    color:#ffff;
+    text-shadow: 0px 3px 6px #000000;
+}
+
+.TitleButton {
+    color:#F5F5F5;
+    background:transparent;
+    outline: none;
+    border: 3px solid #F5F5F5;
+    font-size: 2rem;
+}
+
+.SectionSecond{
+    margin:2rem;
+}
+
+
+
+ .WorldMap {
+    background-image:url('../../../assets/images/worldmap.png');
+    background-size: cover;
+    width: 100%;
+    height: 75%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -280px;
+    opacity: 0.46;
+
+ }
+
+
+
+
+
+.FT2Wrapper {
+    background-color:#E4E4E4;
+    /* width:100%; */
+    height: 32rem;
+    position: relative;
+}
+
+.FT2Image{
+    width: 60%;
+    margin: auto;
+    padding-top: 0.5rem;
+    display: block;
+}
+
+.Background {
+    width: 60%;
+    height: 8rem;
+    position: absolute;
+    bottom: 9.5rem;
+    left: 16.9rem;
+    background: rgba(255, 255, 255,0.4);
+    margin: auto;
+}
+
+.FT2Images {
+    width:80%;
+    display:flex;
+    justify-content: space-around;
+    margin: -5.6rem auto
+}
+
+.FT2SingleImage {
+    width:13rem;
+    height:15rem;
+    z-index: 10;
+}
+
