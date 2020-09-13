@@ -9,19 +9,15 @@ function SearchBox() {
 	const [value, setValue] = useState()
 
 	const handleSubmit = (val) => {
-		
 		const subValue = value || val
-		console.log(subValue)
 	history.push({
 		pathname: '/search',
 		search: '?s='+subValue,
 	  })
 	}
 
-
 	const handleChange = (event) => {	
 		setValue(event.target.value)
-		console.log(value)
          handleSubmit(event.target.value)
 	  };
 

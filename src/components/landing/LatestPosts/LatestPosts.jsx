@@ -9,6 +9,7 @@ function LatestPosts({ posts, last, readMorePosts }) {
 
   
     const shoot = (id) => {
+      console.log(id)
 		 history.push("/post/"+id);
 		 window.location.reload();
 	}
@@ -39,8 +40,10 @@ function LatestPosts({ posts, last, readMorePosts }) {
                   lg={3}
                   xl={3}
                   key={item.ID}
+                  onClick={() => shoot(item.ID)} 
+                  style={{ cursor: 'pointer' }}
                 >
-                  <LatestPostImage post={item} onClick={() => shoot(item.ID)} style={{ cursor: 'pointer' }}/>
+                  <LatestPostImage post={item} style={{ cursor: 'pointer' }}/>
                 </Col>
               ))}
           </Row>

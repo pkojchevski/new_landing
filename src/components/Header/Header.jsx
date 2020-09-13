@@ -40,6 +40,8 @@ function Header() {
     window.location.href = "/";
   };
 
+  
+
   return (
     <div className={classes.Header}>
       <Navbar
@@ -81,27 +83,29 @@ function Header() {
             <DropdownMenu
               style={{
                 backgroundColor: "transparent",
-                margin: ".5rem 0 0",
+                
                 border: "none",
                 width: "500px",
               }}
             >
-              <DropdownItem
+              <DropdownItem className={classes.DItem}
                 style={{
                   backgroundColor: "rgba(255, 255,255,0.88)",
+                  padding:0
                 }}
               >
 			  <a href="/cities">
                 <div
                   className={classes.DestinationsMenuItem}
                 >
-                  <p className={classes.DestinationsText}>Cities</p>
+                  <div className={classes.DestinationsText}>Cities</div>
                 </div>
 				</a>
               </DropdownItem>
-              <DropdownItem
+              <DropdownItem 
                 style={{
-                  backgroundColor: "rgba(255, 255,255,0.75)",
+                  backgroundColor:"rgba(255, 255,255,0.75)",
+                  padding:0
                 }}
               >
 			   <a href="/attractions">
@@ -109,33 +113,35 @@ function Header() {
                   className={classes.DestinationsMenuItem}
                   
                 >
-                  <p className={classes.DestinationsText}>Attractions</p>
+                  <div className={classes.DestinationsText}>Attractions</div>
                 </div>
 				</a>
               </DropdownItem>
-              <DropdownItem
+              <DropdownItem className={classes.DItem}
                 style={{
                   backgroundColor: "rgba(255, 255,255,.67)",
+                  padding:0
                 }}
               >
 			  <a href="/hotels">
                 <div
                   className={classes.DestinationsMenuItem}
                 >
-                  <p className={classes.DestinationsText}>Hotels</p>
+                  <div className={classes.DestinationsText}>Hotels</div>
                 </div>
 				</a>
               </DropdownItem>
-              <DropdownItem
+              <DropdownItem className={classes.DItem}
                 style={{
                   backgroundColor: "rgba(255, 255,255,.67)",
+                  padding:0
                 }}
               >
 			  <a href="/restaurants">
                 <div
                   className={classes.DestinationsMenuItem}
                 >
-                  <p className={classes.DestinationsText}>Restaurants</p>
+                  <div className={classes.DestinationsText}>Restaurants</div>
                 </div>
 				</a>
               </DropdownItem>
@@ -175,6 +181,7 @@ function Header() {
               <DropdownItem
                 style={{
                   backgroundColor: "rgba(255, 255,255,0.88)",
+                  padding:0
                 }}
               >
                 <a href="/environment">
@@ -188,6 +195,7 @@ function Header() {
               <DropdownItem
                 style={{
                   backgroundColor: "rgba(255, 255,255,0.75)",
+                  padding:'0',
                 }}
               >
                 <a href="/social">
@@ -198,9 +206,10 @@ function Header() {
                   </div>
                 </a>
               </DropdownItem>
-              <DropdownItem
+              <DropdownItem className={classes.DItem}
                 style={{
                   backgroundColor: "rgba(255, 255,255,0.67)",
+                  padding:0
                 }}
               >
                 <a href="/cultural">

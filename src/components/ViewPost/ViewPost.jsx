@@ -1,6 +1,5 @@
 import React, { useEffect, useState, Fragment } from 'react'
 import classes from './ViewPost.module.css'
-import MidsomerImage from '../../assets/images/c4.png'
 import SocialIcons from '../SocialIcons/SocialIcons'
 
 import { Container, Row, Col } from 'react-bootstrap';
@@ -63,32 +62,6 @@ function ViewPost(props) {
 
 	  },[]);
 	
-    const [relatedPosts, setLatestsPosts] = useState([
-        {
-            imgUrl: "./images/4.png",
-            content: "5 ways you can help reduce over-tourism",
-            date: "Aug 25, 2019",
-            tag: "#Travel",
-        },
-        {
-            imgUrl: "./images/4.png",
-            content: "5 ways you can help reduce over-tourism",
-            date: "Aug 25, 2019",
-            tag: "#Travel",
-        },
-        {
-            imgUrl: "./images/4.png",
-            content: "5 ways you can help reduce over-tourism",
-            date: "Aug 25, 2019",
-            tag: "#Travel",
-        },
-        {
-            imgUrl: "./images/4.png",
-            content: "5 ways you can help reduce over-tourism",
-            date: "Aug 25, 2019",
-            tag: "#Travel",
-        },
-    ]);
     return (
         <Fragment>
            {!loading ?
@@ -107,12 +80,15 @@ function ViewPost(props) {
                         <div className={classes.PostTextWrapper1}>
                             <h4 className={classes.PostTitle}>{title}</h4>
                             <div className={classes.PostSubTitle}>
-                                <p className={classes.PostFeature}>feature</p>
-                                <p className={classes.PostAuthor}>By author</p>
+                                {/* <p className={classes.PostFeature}>feature</p>
+                                <p className={classes.PostAuthor}>By author</p> */}
                             </div>
                             <div>
+                                <Row>
+                                <p>{ content }</p>
+                                </Row>
                                 {/* {content && content.split('\n').map((item, i) => <p className={classes.PostText} key={i}>{item}</p>)} */}
-                            { content }
+                          
                             </div>
                         </div>
                     </Col>
