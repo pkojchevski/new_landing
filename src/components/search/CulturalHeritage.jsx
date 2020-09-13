@@ -100,7 +100,6 @@ class CulturalHeritage extends Component {
                   lg={3}
                   xl={3}
                   key={item.id}
-                // style={{ margin: 0, padding: 0 }}
                 >
                   <LatestPostImage post={item}/>
                   {/* <div className="cultural-categ-container">

@@ -32,7 +32,6 @@ class Restaurants extends Component {
 		self.setState({loader:true})
  		axios.get('https://oneplanetrating.org/blog/apis/restaurants.php')
 	    .then(function (response) {
-			console.log(response);
 		   self.setState({
 			  data : response.data,
 			  posts:8 < response.data.length ? response.data.slice(0, 8) : response.data,

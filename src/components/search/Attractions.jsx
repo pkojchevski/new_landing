@@ -31,7 +31,6 @@ class Attractions extends Component {
 		self.setState({loader:true})
  		axios.get('https://oneplanetrating.org/blog/apis/attractions.php')
 	    .then(function (response) {
-			console.log(response);
 		   self.setState({
 			  data : response.data,
 			  posts:8 < response.data.length ? response.data.slice(0, 8) : response.data,
@@ -62,9 +61,8 @@ class Attractions extends Component {
 
 	
   render() {
-   
-   const parsed = qs.parse(this.props.location.search);
-   const search_data = parsed.s;
+	const parsed = qs.parse(this.props.location.search);
+	const search_data = parsed.s;
 
     return (
       <>

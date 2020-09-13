@@ -4,35 +4,13 @@ import LatestPostImage from '../landing/LatestPosts/LatestPostImage/LatestPostIm
 import Loader from '../loader/Loader'
 
 class CulturalInteractions extends Component {
-// state = {posts:[], page:0, last:false}
 	constructor(props){
     super(props);
-// this.state={posts:this.props.posts.slice(0,7), page:0, last:false}
    }
 
-//    static getDerivedStateFromProps(nextProps, prevState) {
-//      console.log(prevState)
-//     if (prevState.posts !== nextProps.posts) {
-//       return { posts: nextProps.posts.slice(0, 8), page:1};
-//     }
 
-//     return null;
-// }
-
-
-
-// componentWillReceiveProps(nextProps){
-//   console.log(nextProps.posts)
-//   if (nextProps.posts !== this.props.posts) {
-//     this.setState({posts:this.props.posts.slice(0,8), page:1, last:false})
-//   }
-// }
 	
   render() {
-	this.shoot = (id) => {
-		// alert('id = '+id);
-		window.location.href = "/post/"+id;
-  }
 
   const handleClick = () => {
     this.props.readMorePosts()
@@ -53,7 +31,6 @@ class CulturalInteractions extends Component {
                   lg={3}
                   xl={3}
                   key={item.ID}
-				  onClick={() => this.shoot(item.ID)}
                   // style={{ margin: 0, padding: 0 }}
                 >
                    <LatestPostImage post={item}/>

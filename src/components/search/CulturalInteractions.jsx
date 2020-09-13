@@ -11,10 +11,6 @@ class CulturalInteractions extends Component {
 	
   render() {
 	
-	this.shoot = (id) => {
-		// alert('id = '+id);
-		window.location.href = "/post/"+id;
-  }
   
   const handleClick = () => {
     this.props.readMorePosts()
@@ -34,7 +30,6 @@ class CulturalInteractions extends Component {
                   lg={3}
                   xl={3}
                   key={item.ID}
-				  onClick={() => this.shoot(item.ID)}
                   // style={{ margin: 0, padding: 0 }}
                 >
                   <LatestPostImage post={item}/>

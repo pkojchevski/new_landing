@@ -11,10 +11,10 @@ class LocalEmployment extends Component {
 	
   render() {
     
-	this.shoot = (id) => {
-		// alert('id = '+id);
-		window.location.href = "/post/"+id;
-  }
+	// this.shoot = (id) => {
+	// 	// alert('id = '+id);
+	// 	window.location.href = "/post/"+id;
+  // }
   
   const handleClick = () => {
     this.props.readMorePosts()
@@ -35,7 +35,6 @@ class LocalEmployment extends Component {
                   lg={3}
                   xl={3}
                   key={item.ID}
-				  onClick={() => this.shoot(item.ID)}
                 >
                   <LatestPostImage post={item}/>
                 </Col>

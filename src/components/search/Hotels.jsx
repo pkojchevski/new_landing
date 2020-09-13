@@ -21,18 +21,12 @@ class Hotels extends Component {
 		}
 	componentDidMount() {
 		const parsed = qs.parse(this.props.location.search);
-		// console.log(parsed.s);
 		const search_data = parsed.s;
-		// console.log(search_data);
-
-		  // console.log(qs.parse(this.props.location.search))
 
 		let self = this;
 		self.setState({loader:true})
  		axios.get('https://oneplanetrating.org/blog/apis/hotels.php')
 	    .then(function (response) {
-			
-			console.log(response);
 			
 		   self.setState({
 			  data : response.data,
