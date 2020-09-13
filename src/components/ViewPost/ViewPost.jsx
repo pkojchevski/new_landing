@@ -1,6 +1,5 @@
 import React, { useEffect, useState, Fragment } from 'react'
 import classes from './ViewPost.module.css'
-import SocialIcons from '../SocialIcons/SocialIcons'
 
 import { Container, Row, Col } from 'react-bootstrap';
 import LatestPosts from '../landing/LatestPosts/LatestPosts';
@@ -45,6 +44,7 @@ function ViewPost(props) {
           async function loadPost(id) {
             setLoading(true)
             const response = await axios.get('https://oneplanetrating.org/blog/apis/get-post.php?id='+id)
+            console.log(response.data.hitss[0])
             setTitle(response.data.hitss[0].post_title);
             setContent(parse(response.data.hitss[0].post_content));
             setBanner(response.data.hitss[0].feature_image);
@@ -58,8 +58,6 @@ function ViewPost(props) {
           }
 
           loadPost(post_id);
-
-
 	  },[]);
 	
     return (
@@ -74,18 +72,18 @@ function ViewPost(props) {
                         </div>
                         {/* <SocialIcons facebook={'#3C5A99'} twitter={'#33CCFF'} instagram={"transparent linear-gradient(50deg, #FBE18A 0%, #FCBB45 21%, #F75274 38%, #D53692 52%, #8F39CE 74%, #5B4FE9 100%) 0% 0% no-repeat padding-box"}
                         /> */}
-                        <SocialIcons color={"#024345"}/>
+                        {/* <SocialIcons color={"#024345"}/> */}
                     </Col>
                     <Col>
                         <div className={classes.PostTextWrapper1}>
                             <h4 className={classes.PostTitle}>{title}</h4>
                             <div className={classes.PostSubTitle}>
-                                {/* <p className={classes.PostFeature}>feature</p>
-                                <p className={classes.PostAuthor}>By author</p> */}
+                                <p className={classes.PostFeature}>feature</p>
+                                <p className={classes.PostAuthor}>By author</p>
                             </div>
                             <div>
                                 <Row>
-                                <p>{ content }</p>
+                                <div>{ content }</div>
                                 </Row>
                                 {/* {content && content.split('\n').map((item, i) => <p className={classes.PostText} key={i}>{item}</p>)} */}
                           
@@ -130,9 +128,6 @@ function ViewPost(props) {
                     <LatestPosts className={classes.LatestPostsList} posts={data.hits} last={true} />
                 </div>
             </div>
-
-
-
         </Fragment>
     )
 }
