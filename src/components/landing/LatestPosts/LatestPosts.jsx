@@ -1,18 +1,16 @@
 import React from "react";
-import classes from "./LatestPosts.module.css";
 import LatestPostImage from "./LatestPostImage/LatestPostImage";
-import { useHistory } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 function LatestPosts({ posts, last, readMorePosts }) {
 
-  const history = useHistory();
+  // const history = useHistory();
 
   
-    const shoot = (id) => {
-      console.log(id)
-		 history.push("/post/"+id);
-		 window.location.reload();
-	}
+  //   const shoot = (id) => {
+  //     console.log(id)
+	// 	 history.push("/post/"+id);
+	// 	 window.location.reload();
+	// }
   
   const handleClick = () => {
     readMorePosts()
@@ -40,10 +38,8 @@ function LatestPosts({ posts, last, readMorePosts }) {
                   lg={3}
                   xl={3}
                   key={item.ID}
-                  onClick={() => shoot(item.ID)} 
-                  style={{ cursor: 'pointer' }}
                 >
-                  <LatestPostImage post={item} style={{ cursor: 'pointer' }}/>
+                  <LatestPostImage post={item} />
                 </Col>
               ))}
           </Row>

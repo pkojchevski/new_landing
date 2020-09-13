@@ -1,7 +1,10 @@
 import React from "react";
 import classes from "./LatestPostImage.module.css";
+import { useHistory } from "react-router-dom";
 
 function LatestPostImage({post}) {
+
+  const history = useHistory()
 
   const convertDate = (dateString) => {
     let arr = ['Jan', 'Feb','Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Noe', 'Dec']
@@ -13,9 +16,15 @@ function LatestPostImage({post}) {
     return `${arr[+mm-1]} ${dd}, ${yyyy}`;
   }
 
+  const shoot = (id) => {
+    console.log(id)
+   history.push("/post/"+id);
+   window.location.reload();
+}
+
   return (
     <div className={classes.ImageWrapper}>
-      <div>
+      <div style={{cursor:'pointer'}} onClick={() => shoot(post.ID)}>
       <img src={post.feature_image} alt={post.post_title}></img>
       <div className={classes.Tag}>#{post.tag}</div>
       <div className={classes.Title}>{post.post_title}</div>

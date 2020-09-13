@@ -15,7 +15,6 @@
    width:calc(var(--image-width) + 4px);
    height: 19rem;
    margin-bottom: 50px;
-   cursor:pointer;
 }
 
 
