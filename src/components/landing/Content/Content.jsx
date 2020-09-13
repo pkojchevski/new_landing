@@ -77,8 +77,8 @@ const [posts, setPosts] = useState({});
             <div className={classes.Title}>
               {posts[0].title}
             </div>
-            <button className={classes.TitleButton} onClick={() => shoot(posts[0].ID)}>READ MORE</button>
-            {/* <button className={classes.TitleButton} onClick={getNextPosts}>READ MORE</button> */}
+            <button className="read-more-button large" onClick={() => shoot(posts[0].ID)}>read more</button>
+         
           </div>
           <div className={classes.ProgressBarWrapper}>
             <ProgressBar posts={posts.slice(1, 5)} />

@@ -24,10 +24,44 @@
 .TitleButton {
     color:#F5F5F5;
     background:transparent;
-    outline: none;
-    border: 3px solid #F5F5F5;
+    /* outline: none; */
+    border: 2px solid #F5F5F5;
     font-size: 2rem;
+    border-radius: 4px;
+    padding: 5px;
+    text-transform: uppercase;
+    transition:all 0.3s;
 }
+
+.TitleButton:hover {
+    /* font-size: 2rem;
+    border-radius: 4px;
+    padding: 5px; */
+    background: #257397;
+    border: 2px solid #257397;
+    text-transform: capitalize;
+    color: white;
+
+}
+
+.TitleButton:focus {
+    outline: none;
+}
+
+/* .read-more-button:hover {
+    background: #257397;
+    border: 2px solid #257397;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100px;
+    text-transform: capitalize;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  .read-more-button:focus {
+    outline: none;
+  } */
 
 .SectionSecond{
     margin:2rem;
@@ -45,7 +79,6 @@
     left: -280px;
     opacity: 0.46;
     top:-10%;
-
  }
 
 

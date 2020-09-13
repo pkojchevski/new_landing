@@ -47,9 +47,9 @@ function LatestPosts({ posts, last, readMorePosts }) {
                 </Col>
               ))}
           </Row>
-      {!last && <div className={classes.ButtonWrapper}>
-        <button className={classes.Button} onClick={handleClick}>READ MORE</button>
-      </div>}
+      {!last && <div className="read-more-container">
+            <button className="read-more-button" onClick={handleClick}>read more</button>
+          </div>}
     </div>
   );
 }

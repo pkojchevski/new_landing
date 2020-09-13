@@ -182,7 +182,7 @@
   align-items: center;
 }
 .read-more-button {
-  background: white;
+  background: transparent;
   border: 2px solid #257397;
   border-radius: 4px;
   padding: 5px;
@@ -193,7 +193,34 @@
   color: #257397;
   margin-top: 40px;
   margin-bottom: 30px;
+  transition:all 0.2s;
 }
+
+.large {
+  color:#F5F5F5;
+  background:transparent;
+  border: 2px solid #F5F5F5;
+  font-size: 2rem;
+  border-radius: 4px;
+  padding: 5px;
+  text-transform: uppercase;
+  margin: 0;
+    width: 13rem;
+}
+
+button.large:hover {
+  background: #257397;
+  border: 2px solid #257397;
+  text-transform: capitalize;
+  color: white;
+  font-size: 2rem;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 0;
+    width: 13rem;
+}
+
+
 .read-more-button:hover {
   background: #257397;
   border: 2px solid #257397;
